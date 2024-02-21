@@ -6,15 +6,19 @@ let messageDiscount = '';
 let price;
 let finalPrice;
 
+
 // dichiaro i dati di partenza
 const priceXKm = 0.21;
 const discountYoung = 20;
 const discountSenior = 40;
 
 
+// calcolo prezzo biglietto di default
 price = km * priceXKm;
 finalPrice = price; 
 
+
+// tasto genera
 document.getElementById('btnGenera').addEventListener('click', function() { 
   km = parseInt(document.getElementById('km').value);
   age = document.getElementById('age').value;
@@ -33,3 +37,11 @@ document.getElementById('btnGenera').addEventListener('click', function() {
 
 
 });
+
+
+// tasto annulla
+document.getElementById('btnAnnulla').addEventListener('click', function() {
+    document.getElementById('km').value = '';
+    document.getElementById('age').value = '';
+    document.getElementById('fullname').value = '';
+  });
