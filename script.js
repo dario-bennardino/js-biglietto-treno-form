@@ -31,5 +31,13 @@ if(age < 18){
 }
 
 document.getElementById('btnGenera').addEventListener('click', function() { 
+  km = parseInt(document.getElementById('km').value);
+  age = document.getElementById('age').value;
+  fullname = document.getElementById('fullname').value;
+  price = km * priceXKm;
+  finalPrice = price; 
+  console.log(price);
   
+
+
 });
