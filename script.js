@@ -36,6 +36,13 @@ document.getElementById('btnGenera').addEventListener('click', function() {
   console.log('Prezzo biglietto:', finalPrice.toFixed(2));
 
 
+document.querySelector('.biglietto-prezzo').classList.remove('d-none');
+
+document.querySelector('.nominativo').textContent = fullname;
+
+document.querySelector('.prezzo').textContent = finalPrice.toFixed(2);
+console.log('Prezzo biglietto:', finalPrice.toFixed(2));
+
 });
 
 
@@ -44,4 +51,5 @@ document.getElementById('btnAnnulla').addEventListener('click', function() {
     document.getElementById('km').value = '';
     document.getElementById('age').value = '';
     document.getElementById('fullname').value = '';
+    document.querySelector('.biglietto-prezzo').classList.add('d-none');
   });
