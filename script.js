@@ -11,24 +11,9 @@ const priceXKm = 0.21;
 const discountYoung = 20;
 const discountSenior = 40;
 
-// km = parseInt(prompt('Quanti km devi percorrere?'));
-// console.log(km);
-
-// age = parseInt(prompt('Quanti anni hai?'));
-// console.log(age);
 
 price = km * priceXKm;
 finalPrice = price; 
-
-//sezione sconti
-
-if(age < 18){
-    finalPrice *=1 - (discountYoung / 100);
-    // messageDiscount = 'Dal momento che sei minorennehai lo sconto del ${discountYoung}% e quindi pagherai solo €; ${finalPrice.toFixed(2)}'   
-} else if(age >= 65){
-    finalPrice *= 1 - (discountSenior / 100);
-    // messageDiscount = 'Sei un cliente senior quindi hai uno sconto del ${discountSenior}% e quindi pagherai solo €{finalPrice}'
-}
 
 document.getElementById('btnGenera').addEventListener('click', function() { 
   km = parseInt(document.getElementById('km').value);
@@ -37,7 +22,14 @@ document.getElementById('btnGenera').addEventListener('click', function() {
   price = km * priceXKm;
   finalPrice = price; 
   console.log(price);
+
+  if(age < 18){
+    finalPrice *= 1 - (discountYoung / 100);
+  } else if(age > 65){
+    finalPrice *= 1 - (discountSenior / 100);
+  }
   
+  console.log('Prezzo biglietto:', finalPrice.toFixed(2));
 
 
 });
