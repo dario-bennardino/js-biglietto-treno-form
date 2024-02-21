@@ -29,3 +29,7 @@ if(age < 18){
     finalPrice *= 1 - (discountSenior / 100);
     // messageDiscount = 'Sei un cliente senior quindi hai uno sconto del ${discountSenior}% e quindi pagherai solo €{finalPrice}'
 }
+
+document.getElementById('btnGenera').addEventListener('click', function() { 
+  
+});
