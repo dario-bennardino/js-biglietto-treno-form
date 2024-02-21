@@ -16,8 +16,8 @@ Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pa
 ## Svolgimento
 1. dichiaro le variabili che mi servono: let age,km,message, message discount,price,final price.
 2. dichiaro i dati di partenza: prezzo al km, sconto under 18, sconto over 65.
-3. prompt numero di km da percorrere
-4. prompt età passeggero
+3.
+4. 
 5. criteri calcolo prezzo biglietto
 6. prezzo = km * prezzo al km
 7. prezzo finale = prezzo finale (di default ugale al prezzo senza sconti)
